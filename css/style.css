@@ -1,0 +1,353 @@
+:root {
+  --primary: #133c9a;
+  --secondary: #157a6e;
+  --danger: #ff6f56;
+  --highlight: #ff6f56;
+  --info: #ffadad;
+}
+
+@font-face {
+  font-family: "aileron-heavy";
+  src: local("aileron"), url("../assets/fonts/aileron/Aileron-Heavy.otf");
+}
+
+@font-face {
+  font-family: "aileron-thin";
+  src: local("aileron"), url("../assets/fonts/aileron/Aileron-Thin.otf");
+}
+
+@font-face {
+  font-family: "aileron-light";
+  src: local("aileron"), url("../assets/fonts/aileron/Aileron-Light.otf");
+}
+
+@font-face {
+  font-family: "aileron-regular";
+  src: local("aileron"), url("../assets/fonts/aileron/Aileron-Regular.otf");
+}
+
+@font-face {
+  font-family: "aileron-italic";
+  src: local("aileron"), url("../assets/fonts/aileron/Aileron-Italic.otf");
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.bg-highlight {
+  background-color: var(--highlight);
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "aileron-heavy";
+}
+
+p {
+  font-family: "aileron-light";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+nav {
+  user-select: none;
+}
+
+.top-nav-item {
+  font-family: "aileron-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  display: block;
+  margin: 0 1.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.v-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav-sponsor {
+  transition: all 1s ease;
+  padding: 0.8rem 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  background-color: var(--highlight);
+  border: 2px solid transparent;
+  color: white !important;
+}
+
+.my-nav-item:hover {
+  color: initial;
+}
+
+.top-nav {
+  max-width: 80%;
+  margin: auto;
+}
+
+.landing {
+  background-image: url("../assets/backgrounds/landing-img.png");
+  background-size: cover;
+  overflow-y: hidden;
+  min-height: 100vh;
+}
+
+.landing-title {
+  font-family: "aileron-heavy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+.landing-box {
+  max-width: 70%;
+  margin-top: 7rem;
+}
+
+.info-text {
+  line-height: 1.2;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
+.cta-btn {
+  user-select: none;
+  word-wrap: break-word;
+  transition: all 1s ease;
+  display: inline-block;
+  text-align: center;
+  background-color: var(--highlight);
+  font-family: "aileron-regular";
+  color: white !important;
+  padding: 1.2rem 0;
+  width: 100%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border: 3px solid transparent;
+}
+
+.cta-btn-outline {
+  user-select: none;
+  word-wrap: break-word;
+  transition: all 1s ease;
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+  font-family: "aileron-regular";
+  border: 3px solid var(--highlight);
+  color: var(--highlight) !important;
+  padding: 1.2rem 0;
+  width: 100%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.chip-section {
+  background-image: url("../assets/backgrounds/chip.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+.chip-content {
+  max-width: 80%;
+  margin: auto;
+  padding-top: 19rem;
+}
+
+.chip-title {
+  font-family: "aileron-heavy";
+  font-size: 64px;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 69px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.our-mission {
+  background-color: white;
+  margin-top: 10rem;
+  padding: 4rem;
+}
+
+.scrolling-text-blue {
+  color: var(--primary);
+  font-size: 4rem;
+  font-weight: bold;
+  word-spacing: 0.5rem;
+  display: block;
+  margin: 0.5rem 2rem;
+}
+
+.scrolling-text-outline {
+  color: white;
+  text-shadow: -2px -2px 0 var(--primary), 2px -2px 0 var(--primary), -2px 2px 0 var(--primary),
+    2px 2px 0 var(--primary);
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 0.3rem 2rem;
+}
+
+.main-pg-gcc-section{
+  background-image: url('../assets/backgrounds/gcc-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  height: 95vh;
+  width: 100%;
+}
+
+.main-pg-gcc-section__container{
+  margin: auto;
+  max-width: 80%;
+}
+
+.main-pg-gcc-ppl{
+  margin-top: 28rem;
+  margin-left: 3rem;
+}
+
+.main-pg-gcc-content{
+  margin-top: 22rem;
+}
+
+@media screen and (max-width: 411px) {
+  .landing-box {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .chip-title {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main-pg-gcc-ppl{
+    margin: 6rem auto !important;
+  }
+
+  .top-nav-item {
+    margin-top: 1.2rem;
+  }
+
+  .top-nav-items {
+    border-radius: 20px;
+    background-color: white;
+    padding: 2rem;
+  }
+
+  .gcc-sponsor-landing {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .landing-box {
+    margin-top: 2rem;
+  }
+
+  .chip-section {
+    background-size: cover !important;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .chip-section {
+    background-size: 110%;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .chip-section {
+    background-size: 120%;
+  }
+
+  .main-pg-gcc-ppl{
+    margin-top: 25rem;
+  }
+
+  .main-pg-gcc-content{
+    margin-top: 18rem;
+  }
+
+  .main-pg-gcc-section{
+    height: auto;
+  }
+
+  .main-pg-gcc-section__container{
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .chip-section {
+    background-size: 130%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .chip-section {
+    background-size: 140%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .chip-section {
+    background-size: 160%;
+  }
+
+  .main-pg-gcc-section{
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .chip-section {
+    background-size: 180%;
+  }
+}
