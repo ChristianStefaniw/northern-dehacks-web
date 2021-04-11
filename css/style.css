@@ -4,6 +4,7 @@
   --danger: #ff6f56;
   --highlight: #ff6f56;
   --info: #ffadad;
+  --input-bg: #EBEBEB;
 }
 
 @font-face {
@@ -31,6 +32,10 @@
   src: local("aileron"), url("../assets/fonts/aileron/Aileron-Italic.otf");
 }
 
+input, textarea{
+  display: block;
+}
+
 .highlight {
   color: var(--highlight);
 }
@@ -41,6 +46,10 @@
 
 a {
   color: black;
+}
+
+.lh-05{
+  line-height: 0.5px;
 }
 
 a:hover {
@@ -58,6 +67,14 @@ h5 {
 
 p {
   font-family: "aileron-light";
+}
+
+button:focus{
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 * {
@@ -83,7 +100,7 @@ nav {
   font-family: "aileron-regular";
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.2rem;
   display: block;
   margin: 0 1.5rem;
   height: 100%;
@@ -98,11 +115,10 @@ nav {
 
 .top-nav-sponsor {
   transition: all 1s ease;
-  padding: 0.8rem 1.8rem;
+  padding: 0.9rem 1.9rem;
   font-weight: bold;
   letter-spacing: 1.3px;
   background-color: var(--highlight);
-  border: 2px solid transparent;
   color: white !important;
 }
 
@@ -126,7 +142,7 @@ nav {
   font-family: "aileron-heavy";
   font-style: normal;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 58px;
   text-transform: capitalize;
   color: var(--primary);
@@ -139,29 +155,33 @@ nav {
 
 .info-text {
   line-height: 1.2;
-  font-size: 17px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 300;
   letter-spacing: 0.005em;
   text-align: left;
 }
 
+.border-transparent-3{
+  border: 3px solid transparent !important;
+}
+
 .cta-btn {
   user-select: none;
   word-wrap: break-word;
   transition: all 1s ease;
-  display: inline-block;
+  display: block;
   text-align: center;
   background-color: var(--highlight);
   font-family: "aileron-regular";
   color: white !important;
   padding: 1.2rem 0;
   width: 100%;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  border: 3px solid transparent;
+  border: none;
 }
 
 .cta-btn-outline {
@@ -176,10 +196,44 @@ nav {
   color: var(--highlight) !important;
   padding: 1.2rem 0;
   width: 100%;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.1rem;
+}
+
+.mat-btn{
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.mat-btn:before{
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  transform: translate(-50%, -50%);
+}
+
+.mat-btn:active:before{
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.mat-btn:focus:not(:active)::after{
+  animation: ripple 1s ease-out;
 }
 
 .chip-section {
@@ -197,7 +251,7 @@ nav {
 
 .chip-title {
   font-family: "aileron-heavy";
-  font-size: 64px;
+  font-size: 4rem;
   word-wrap: break-word;
   font-style: normal;
   font-weight: 900;
@@ -246,17 +300,123 @@ nav {
 }
 
 .main-pg-gcc-ppl{
-  margin-top: 28rem;
+  margin-top: 20rem;
   margin-left: 3rem;
 }
 
 .main-pg-gcc-content{
-  margin-top: 22rem;
+  margin-top: 14rem;
+}
+
+.newsletter-container{
+  max-width: 50%;
+  margin: auto;
+}
+
+.newsletter-text{
+  max-width: 40%;
+}
+
+.newsletter-input{
+  width: 100%;
+  height: 100%;
+  font-size: 1.2;
+  padding: 0 1.5rem;
+  background-color: var(--input-bg);
+  border: none;
+  outline: none;
+}
+
+.newsletter-input:active{
+  outline: none;
+}
+
+.newsletter-section{
+  margin: 15rem 0
+}
+
+.general-title{
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.past-events-section{
+  margin-bottom: 13rem;
+}
+
+.instagram-container{
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+
+.fs-22{
+  font-size: 1.4rem;
+}
+
+iframe.instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: auto !important;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.icon {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  color: white;
+}
+
+.contact{
+  margin-bottom: 5rem;
+}
+
+.contact-input{
+  width: 100%;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  background-color: var(--input-bg);
+}
+
+.contact-input:focus{
+  outline: none;
+}
+
+.contact-textarea-h{
+  min-height: 15rem;
+}
+
+.contact-btn{
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--secondary);
+  font-weight: bold;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 0.3rem;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 400px) {
+  .instagram-container{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 411px) {
-  .landing-box {
-    max-width: 90%;
+  .newsletter-text{
+    max-width: 80%;
   }
 }
 
@@ -267,8 +427,32 @@ nav {
 }
 
 @media screen and (max-width: 991px) {
+  .mb-lg-1{
+    margin-bottom: 1rem;
+  }
+
   .main-pg-gcc-ppl{
     margin: 6rem auto !important;
+  }
+
+  .newsletter-input{
+    padding: 1.2rem;
+  }
+
+  .newsletter-text{
+    max-width: 60%;
+  }
+  
+  .landing-box {
+    max-width: 100%;
+  }
+
+  .newsletter-container{
+    max-width: 90%;
+  }
+  
+  .newsletter-input-container{
+    margin-bottom: 1rem;
   }
 
   .top-nav-item {
@@ -278,7 +462,7 @@ nav {
   .top-nav-items {
     border-radius: 20px;
     background-color: white;
-    padding: 2rem;
+    padding: 2rem 0;
   }
 
   .gcc-sponsor-landing {
